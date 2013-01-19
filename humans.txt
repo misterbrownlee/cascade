@@ -3,13 +3,14 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Aaron Brownlee - Developer - http://github.com/tehfoo
 
 # THANKS
 
-    <name>
+    HTML5Boilerplate
 
 # TECHNOLOGY COLOPHON
 
+    HTML5Boilderplate, initializr
     HTML5, CSS3
     jQuery, Modernizr

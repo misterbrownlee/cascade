@@ -1,4 +1,4 @@
 cascade
 =======
 
-Website for a friend, based on HTML5Boilderplate
+Website for a friend, based on HTML5Boilderplate, using initializr
