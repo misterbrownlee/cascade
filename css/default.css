@@ -1,0 +1,147 @@
+/* mostly lifted from HTML5 Boilerplate */
+body 
+{
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+a { color: #00e; }
+a:visited { color: #551a8b; }
+a:hover { color: #06e; }
+
+/* remove the gap between images and the bottom of their containers: h5bp.com/i/440 */
+img { vertical-align: middle; }
+
+/* allow only vertical resizing of textareas */
+textarea { resize: vertical; }
+
+
+/* 
+   ===  styles specific to this project ===
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+   ===  global helpers ===
+*/
+/* image replacement; Be sure to include background-image: url(pathtoimage.png) 
+  for that specific element so that image replacement can occur.
+*/
+
+.ir 
+{
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
+}
+
+.ir:before 
+{
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%;
+}
+
+
+/* Hide from both browser and screen reader */
+.hidden 
+{
+  display: none !important;
+  visibility: hidden;
+}
+
+/* Hide but keep in layout */
+.invisible { visibility: hidden; }
+
+/* clear fix floats */
+.clearfix:before, .clearfix:after { clear: both; }
+
+/* for IE 6/7 only */
+.clearfix { *zoom: 1; }
+
+/* 
+  template for adding media query styles 
+  
+@media only screen and (min-width: 35em) 
+{
+   
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) 
+{
+
+}
+*/
+
+/* 
+  inline print styles for better performance
+  
+*/
+
+@media print {
+  * {
+      background: transparent !important;
+      color: #000 !important; /* Black prints faster: h5bp.com/s */
+      box-shadow:none !important;
+      text-shadow: none !important; 
+  }
+
+  a, a:visited { text-decoration: underline; }
+  
+  a[href]:after { content: " (" attr(href) ")"; }
+  
+  abbr[title]:after { content: " (" attr(title) ")"; }
+
+  /* don't show links for images, or javascript/internal links */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after 
+  {
+    content: "";
+  }
+
+  pre, blockquote 
+  {
+     border: 1px solid #999;
+     page-break-inside: avoid;
+  }
+
+  thead { display: table-header-group; /* h5bp.com/t */ }
+
+  tr, img { page-break-inside: avoid; }
+  
+  img { max-width: 100% !important; }
+
+  @page { margin: 0.5cm; }
+
+  p, h2, h3 
+  {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2, h3 { page-break-after: avoid; }
+}
