@@ -1,0 +1,121 @@
+/**
+ Mixin: .font-face
+ Quickly declare a font face
+*/
+.font(@font-name, @font-file, @font-weight: normal, @font-style: normal) {
+    font-family: @font-name;
+
+    src: url(~"@{font-folder}/@{font-file}-webfont.eot");
+    src: url(~"@{font-folder}/@{font-file}-webfont.eot?#iefix") format("embedded-opentype"),
+         url(~"@{font-folder}/@{font-file}-webfont.woff") format("woff"),
+         url(~"@{font-folder}/@{font-file}-webfont.ttf") format("truetype"),
+         url(~"@{font-folder}/@{font-file}-webfont.svg#@{font-name}") format("svg");
+
+    font-weight: @font-weight;
+    font-style: @font-style;
+}
+
+/**
+ Mixin: .gradient
+ A simpler syntax for gradients
+*/
+.gradient(@start: white, @end: black) {
+    #gradient > .vertical(@start, @end);
+}
+
+
+/**
+ Mixin: .shadow
+ A simpler syntax for shadow with defaults
+*/
+.shadow(@distance: 0.1rem, @spread: 0.1rem, @weight: 0.25) {
+    .box-shadow(@distance @distance @spread rgba(0, 0, 0, @weight));
+}
+
+/**
+ Mixin: .ellipsis
+ Truncate overflowed text using ellipsis: ...
+*/
+.ellipsis() {
+    // display: inline-block; // Works without in Chrome
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+/**
+ Mixin: .background-size
+ Set the scaling of the background image or gradient
+*/
+.background-size(@width, @height) { 
+    -webkit-background-size: @width @height;
+    -moz-background-size: @width @height;
+    background-size: @width @height;
+}
+.background-size(@size) { 
+    .background-size(@size, @size);
+}
+
+/** 
+Mixin: Clearfix
+For clearing floats like a boss h5bp.com/q
+*/
+.clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    // Fixes Opera/contenteditable bug:
+    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+/**
+ Mixin: .box-sizing
+  helper to set vendor box-sizing value
+*/
+.box-sizing(@boxmodel) {
+  -webkit-box-sizing: @boxmodel;
+     -moz-box-sizing: @boxmodel;
+          box-sizing: @boxmodel;
+}
+
+/**
+ Mixin: .border-box
+ Set an element as a border box
+*/
+.border-box {
+    .box-sizing(border-box);
+}
+
+/**
+ Mixin: .box-sizing
+ Set an element as a border box
+*/
+.border-box {
+    .box-sizing(border-box);
+}
+
+/**
+ Mixin: .calc-width
+ Sets the width with a calc() expression
+*/
+.calc-width(@expression) {
+    width: -webkit-calc(@expression);
+    width: -moz-calc(@expression);
+    width: -o-calc(@expression);
+    width: calc(@expression);
+}
+.calc-width(@expression, @fallback) {
+    width: @fallback;
+    .calc-width(@expression);
+}
+
+
