@@ -19,10 +19,12 @@ module.exports = function(grunt) {
       },
       source: {
         root:     sourceDir,
+        css:      sourceDir + '/css',
         less:     sourceDir + '/less',
-        js:       sourceDir + 'js',
-        images:   sourceDir + 'images',
-        fonts:    sourceDir + 'fonts'
+        js:       sourceDir + '/js',
+        coffee:   sourceDir + '/coffee',
+        images:   sourceDir + '/images',
+        fonts:    sourceDir + '/fonts'
       }
     },
 
@@ -56,6 +58,12 @@ module.exports = function(grunt) {
         cwd: '<%=dirs.source.fonts%>',  
         src: ['**/*'], 
         dest: '<%=dirs.build.fonts%>'
+      },
+      css: {
+        expand: true, 
+        cwd: '<%=dirs.source.css%>',  
+        src: ['**/*'], 
+        dest: '<%=dirs.build.css%>'
       }
     },
 
