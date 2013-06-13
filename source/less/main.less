@@ -1,14 +1,14 @@
-/**
-Includes
-*/
+//
+// Includes
+//
 @import '/includes/config.less';
 @import '/includes/mixins.less';
 @import '/includes/variables.less';
 
 
-/* ==========================================================================
-   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
-   ========================================================================== */
+// ==========================================================================
+//   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
+  
 html,
 button,
 input,
@@ -43,7 +43,6 @@ hr {
 
 img {
     vertical-align: middle;
-
 }
 
 fieldset {
@@ -64,35 +63,55 @@ textarea {
 }
 
 
-// ===== Initializr Styles ==================================================
-// Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
-
-.wrapper {
-    width: 90%;
-    margin: 0 5%;
-}
-
-.header-container {
-    border-bottom: 20px solid @container-secondary-color;
-}
-
-.footer-container,
-.main aside {
-    border-top: 20px solid @container-aside-bordertop-color;
-}
-
-.header-container,
-.footer-container,
-.main aside {
-    background: @container-main-color;
-}
-
-.title {
-    color: white;
-}
-
 // ============================
 //   MOBILE FIRST!
+
+// @font-face {
+//   font-family: "UnderwoodChampionRegular";
+//   src: url(../fonts/underwood_champion-webfont.eot);
+//   src: url(../fonts/underwood_champion-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/underwood_champion-webfont.woff) format("woff"), url(../fonts/underwood_champion-webfont.ttf) format("truetype"), url(../fonts/underwood_champion-webfont.svg#UnderwoodChampionRegular) format("svg");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: @default-body-background-color;  
+  font-family: Arial, sans-serif;
+  padding: 0 0;
+  margin: 0 0;
+}
+
+h1, h2, h3 {
+  color: @title-text-color;
+  margin-bottom: .2rem;
+}
+
+ul {
+  list-style: none;
+  margin: 0 0;
+  padding: 0 1rem;
+}
+
+article {
+  margin-bottom: 200px;
+  padding: .9rem 1rem;
+  border-radius: 7px;
+  background-color: rgba(225, 225, 225, 0.8);
+}
+
+article h1 {
+  text-align: center;
+}
+
+.main-container {
+  margin: 0 auto;
+  background: url(../images/compass_rotated.jpg) 0 0 no-repeat;
+  background-size: auto 100%;
+}
 
 .wrapper {
   width: 90%;
@@ -100,7 +119,7 @@ textarea {
 }
 
 .header-container {
-  border-bottom: 1.1rem solid //@container-secondary-color;
+  border-bottom: 1.1rem solid @container-secondary-color;
 }
 
 .footer-container,
@@ -115,7 +134,7 @@ textarea {
 }
 
 .title {
-  color: white;
+  color: @title-text-color;
 }
 
 .main {
@@ -167,50 +186,30 @@ nav a:hover {
   text-align: center;
 }
 
+.cities-list li {
+  margin: 0;
+  display: inline-block;
+  padding: 0;
+}
+
+.cities-list li:last-child:after {
+  content: none;
+}
+
+.cities-list li:after {
+  margin-right: 4px;
+  margin-left: 8px;
+  padding: 0;
+  content: '-';
+}
+
 // ==============================
 //  ALL: IE Fixes
 .ie7 .title {
     padding-top: 20px;
 }
 
-// @font-face {
-//   font-family: "UnderwoodChampionRegular";
-//   src: url(../fonts/underwood_champion-webfont.eot);
-//   src: url(../fonts/underwood_champion-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/underwood_champion-webfont.woff) format("woff"), url(../fonts/underwood_champion-webfont.ttf) format("truetype"), url(../fonts/underwood_champion-webfont.svg#UnderwoodChampionRegular) format("svg");
-//   font-weight: normal;
-//   font-style: normal;
-// }
 
-html {
-  font-size: 16px;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  padding: 0 0;
-  margin: 0 0;
-}
-
-// h1, h2, h3 {
-//   font-family: UnderwoodChampionRegular, Palatino, Georgia, serif;
-// }
-
-article {
-  margin-bottom: 200px;
-  padding: 1rem .7rem;
-  border-radius: 7px;
-  background-color: rgba(225, 225, 225, 0.8);
-}
-
-article h1 {
-  text-align: center;
-}
-
-.main-container {
-  margin: 0 auto;
-  background: url(../images/compass_rotated.jpg) 0 0 no-repeat;
-  background-size: auto 100%;
-}
 
 #scroll-window {
   height: 600px;
@@ -250,36 +249,55 @@ article h1 {
 // > 768 WIDE: CSS3 Effects
 // ==================== */
 @media only screen and (min-width: 768px) {
+  
   nav {
     float: left;
   }
+  
   nav a {
     display: block;
     float: none;
   }
+  
   .header-container,
   .main aside {
     -webkit-box-shadow: 0 5px 10px #aaa;
     -moz-box-shadow: 0 5px 10px #aaa;
     box-shadow: 0 5px 10px #aaa;
+    .rounded(4px);
   }
+  
   .main-container {
     background: url(../images/compass_rect.jpg) right top no-repeat;
     background-size: cover;
   }
+
   .title {
     width: 100%;
     text-align: left;
     float: left;
+    font-size: 3rem;
   }
+
+  .bigger {
+    font-size: 1.4rem;
+  }
+
+  .center {
+    text-align: center;
+  }
+
   nav {
     float: right;
     width: 20%;
   }
+
   .main article {
+    //padding: 0.24rem 1.2rem;
     float: left;
     width: 95%;
   }
+
   .main .aside {
     float: right;
     width: 28%;

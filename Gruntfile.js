@@ -71,7 +71,7 @@ module.exports = function(grunt) {
     /*    WATCH    */
     watch: {
       main: {
-        files: ['<%= dirs.source %>/**/*.html', '<%= dirs.source %>/**/*.txt'],
+        files: ['<%= dirs.source.root %>/**/*.html', '<%= dirs.source.root %>/**/*.txt'],
         tasks: 'copy:main'
       },
       less: {
