@@ -80,12 +80,14 @@ html {
 
 body {
   background-color: @default-body-background-color;  
-  font-family: Arial, sans-serif;
+  font-family: sans-serif;
   padding: 0 0;
   margin: 0 0;
 }
 
 h1, h2, h3 {
+  font-family: "trajan-sans-pro", Arial, sans-serif;
+  font-weight: normal;
   color: @title-text-color;
   margin-bottom: .2rem;
 }
@@ -93,18 +95,17 @@ h1, h2, h3 {
 ul {
   list-style: none;
   margin: 0 0;
-  padding: 0 1rem;
+  padding: 0;
 }
 
 article {
-  margin-bottom: 200px;
+  margin-bottom: 400px;
   padding: .9rem 1rem;
-  border-radius: 7px;
   background-color: rgba(225, 225, 225, 0.8);
 }
 
 article h1 {
-  text-align: center;
+  text-align: left;
 }
 
 .main-container {
@@ -142,7 +143,7 @@ article h1 {
 }
 
 .main article h1 {
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 .main aside {
@@ -153,13 +154,12 @@ article h1 {
 nav a {
   display: block;
   margin-bottom: 0.8rem;
-  padding: 0.6rem 0.1rem;
-  text-align: center;
+  padding: 0.6rem 0.4rem;
+  text-align: left;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: normal;
   color: @nav-text-color;
   background: @nav-background-color;
-  border-radius: 0.4rem;
 }
 
 nav a :hover,
@@ -172,7 +172,7 @@ nav a:hover {
 }
 
 .footer-container footer {
-  color: white;
+  color: @footer-heading-text-color;
   padding: 0.1rem 0;
   padding-bottom: .5rem;
 }
@@ -187,9 +187,11 @@ nav a:hover {
 }
 
 .cities-list li {
+  color: @footer-text-color;
   margin: 0;
   display: inline-block;
   padding: 0;
+  font-size: 0.8rem;
 }
 
 .cities-list li:last-child:after {
@@ -264,7 +266,6 @@ nav a:hover {
     -webkit-box-shadow: 0 5px 10px #aaa;
     -moz-box-shadow: 0 5px 10px #aaa;
     box-shadow: 0 5px 10px #aaa;
-    .rounded(4px);
   }
   
   .main-container {
@@ -296,6 +297,15 @@ nav a:hover {
     //padding: 0.24rem 1.2rem;
     float: left;
     width: 95%;
+
+    a {
+      color: @article-link-color;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   .main .aside {
